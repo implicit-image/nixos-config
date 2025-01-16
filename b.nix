@@ -24,6 +24,9 @@
 
     # books
     ./hm-modules/calibre.nix
+
+    # wine
+    ./hm-modules/wine.nix
   ];
 
   home.username = "b";
