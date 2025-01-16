@@ -63,6 +63,10 @@
   vim
   neovim
   btop
+  unzip
+  gzip
+  zip
+  xarchiver
   ];
 
   environment.variables = {
@@ -90,7 +94,7 @@
       enable = true;
       xkb = {
         layout = "us, pl";
-	options = "grp:alt_shift_toggle";
+  options = "grp:alt_shift_toggle";
       };
       displayManager = {
         defaultSession = "none+i3";
@@ -103,9 +107,9 @@
         extraPackages = with pkgs; [
           i3lock
           i3status-rust
-	  lightlocker
+    lightlocker
           i3status
-	  networkmanagerapplet
+    networkmanagerapplet
           rofi
           xterm
           kitty
