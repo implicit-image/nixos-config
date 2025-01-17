@@ -27,6 +27,9 @@
 
     # wine
     ./hm-modules/wine.nix
+
+    # virtualisation
+    ./hm-modules/virtualisation.nix
   ];
 
   home.username = "b";

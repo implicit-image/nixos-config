@@ -10,5 +10,13 @@
     gnumake
     libtool
     file
+
+    # dev tools
+    code-cursor
   ];
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+  };
 }
