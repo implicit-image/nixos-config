@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 {
   programs.zsh = {
-    enabled = true;
+    enable = true;
     syntaxHighlighting = {
       enable = true;
       highlighters = [
         "brackets"
         "regexp"
         "root"
-      ]
+      ];
     };
     autosuggestion = {
       enable = true;
