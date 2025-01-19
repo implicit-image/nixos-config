@@ -3,7 +3,6 @@
   home = {
     sessionVariables = {
       SHELL = "zsh";
-      EDITOR = "helix";
     };
   };
 }
