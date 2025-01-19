@@ -11,8 +11,21 @@
     libtool
     file
 
-    # dev tools
-    code-cursor
+    # formatters
+    asdf-vm
+
+    # language servers
+    ccls
+    vue-language-server
+    jdt-language-server
+    lua-language-server
+    yaml-language-server
+    bash-language-server
+    astro-language-server
+    kotlin-language-server
+    svelte-language-server
+    haskell-language-server
+    # vscode-langserver-extracted
   ];
 
   programs.vscode = {

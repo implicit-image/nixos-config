@@ -2,6 +2,10 @@
 {
   home.packages = with pkgs; [
     xclip
+    unrar
+    unzip
+    p7zip
+    gnutar
     xarchiver
     xfce.thunar
     xfce.thunar-volman
