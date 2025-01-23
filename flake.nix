@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    # lem-editor.url = "github:lem-project/lem";
 
     # home-manager, used for managing user configuration
     home-manager = {
@@ -17,7 +18,7 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager,  ... }: { 
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

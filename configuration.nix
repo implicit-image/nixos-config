@@ -73,6 +73,7 @@
     EDITOR = "nvim";
   };
 
+  environment.pathsToLink = [ "/share/zsh" ];
   services.libinput.touchpad = {
     tapping = false;
   };

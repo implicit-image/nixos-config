@@ -9,6 +9,7 @@
       "*.swp"
       "#*#"
       ".ccls-cache"
+      "node_modules/*"
     ];
   };
 }

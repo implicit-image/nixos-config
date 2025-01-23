@@ -2,6 +2,7 @@
 {
   programs.zsh = {
     enable = true;
+    enableCompletion = true;
     syntaxHighlighting = {
       enable = true;
       highlighters = [
@@ -19,8 +20,9 @@
       plugins = [
         "git"
         "sudo"
+        "asdf"
       ];
-      theme = "robbyrussel";
+      theme = "aussiegeek";
     };
     plugins = [];
   };
