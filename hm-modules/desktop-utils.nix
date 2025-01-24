@@ -24,7 +24,7 @@
         origin = "top-right";
         transparency = 100;
         frame_color = "#181818";
-        font = "Iosevka Nerd Font Mono";
+        font = (import ./user-vars.nix).UI_FONT_FAMILY;
       };
       urgency_normal = {
         background = "#181818";

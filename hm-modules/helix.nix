@@ -24,28 +24,36 @@
         #helper functions
         hx-bind = { states }: {};
         #commands
+        ## git commands
         git-status = ":sh git status | column";
-        toggle-soft-wrap = ":toggle soft-wrap.enable";
-        toggle-auto-completion = ":toggle auto-completion";
+        git-branches = ":sh git branch -l";
+        ## browsing commands
         browse-parent-dir = [ ":cd .." "file_picker_in_current_directory" ];
         browse-home-dir = [ ":cd ~" "file_picker_in_current_directory" ];
-        lsp-restart = ":lsp-restart";
+        ## formatting commands
+        reindent-and-format = [ "select_all" "indent" "format_selections" ];
       in {
         #MODE: normal
         normal = {
           #MAP: leader keys
           space = {
-            "." = ":open";
+            "." = "file_picker_in_current_buffer_directory";
             space = "file_picker";
             q = ":q";
             #MAP: insert
             i = {
               "!" = "shell_insert_output";
+              d = ":insert-output date";
               r = "insert_register";
             };
             #MAP: git
             g = {
               s = git-status;
+              b = git-branches;
+            };
+            t = {
+              w = ":toggle soft-wrap.enable";
+              c = ":toggle auto-completion";
             };
           };
           "A-x" = "command_mode";
@@ -62,7 +70,7 @@
           "C-l" = "jump_view_right";
           #TODO: figure out how to write macros in nixx config
           # reindent the file
-          "=" = [ "select_all" "format_selections" ];
+          "=" = reindent-and-format;
         };
         #MODE: insert
         insert = {
