@@ -22,7 +22,7 @@
       theme = "custom-gruber-darker";
       keys = let
         #helper functions
-        hx-bind = { states }: {};
+        # hx-bind
         #commands
         ## git commands
         git-status = ":sh git status | column";
@@ -123,6 +123,12 @@
           normal = "block";
           insert = "bar";
           select = "underline";
+        };
+        file-picker = {
+          hidden = true;
+          git-ignore = true;
+          ignore = true;
+          parents = true;
         };
         whitespace = {
           render = {
