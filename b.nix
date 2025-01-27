@@ -5,6 +5,8 @@
     ./hm-modules/xdg.nix
     # environment setup
     ./hm-modules/env.nix
+    # tty tools
+    ./hm-modules/tty.nix
     # desktop theme
     ./hm-modules/desktop-theme.nix
     ./hm-modules/desktop-utils.nix
