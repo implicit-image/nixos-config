@@ -8,5 +8,10 @@
   home.packages = with pkgs; [
     # formatters
     cljfmt
+    # spellcheckers
+    hunspell
+    hunspellDicts.pl-pl
+    hunspellDicts.en_US
+    hunspellDicts.el_GR
   ];
 }

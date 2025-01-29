@@ -33,6 +33,7 @@
     ./hm-modules/kitty.nix
     ./hm-modules/helix.nix
     ./hm-modules/chromium.nix
+    ./hm-modules/mpv.nix
   ];
 
   home.username = "b";

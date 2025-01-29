@@ -8,7 +8,6 @@
     let
       nixos-pkgs = with pkgs; [
         uv
-        rustup
         ripgrep
         # generic gnu stuff
         gcc
@@ -16,7 +15,6 @@
         gnumake
         libtool
         file
-        direnv
         devenv
         # language servers
         ccls
@@ -34,8 +32,15 @@
         # emace helpers
         emacs-lsp-booster
         nodejs
+        # haskell
         ghc
         stack
+        # rust
+        rustc
+        rust-code-analysis
+        rust-analyzer
+        rustfmt
+        cargo
       ];
     in
       nixos-pkgs;
@@ -44,6 +49,11 @@
     vscode = {
       enable = true;
       package = pkgs.vscodium;
+    };
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
     };
   };
 
