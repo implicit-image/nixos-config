@@ -17,6 +17,9 @@
 
       # sound
       ./system-modules/sound.nix
+
+      # graphics
+      # ./system-modules/graphics.nix
     ];
 
   # Bootloader.

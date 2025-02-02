@@ -28,12 +28,16 @@
     ./hm-modules/ssh.nix
     ./hm-modules/gpg.nix
 
+    # utils
+    ./hm-modules/images.nix
+
     # software
     ./hm-modules/zsh.nix
     ./hm-modules/kitty.nix
     ./hm-modules/helix.nix
     ./hm-modules/chromium.nix
     ./hm-modules/mpv.nix
+    ./hm-modules/i3.nix
   ];
 
   home.username = "b";
