@@ -11,7 +11,7 @@
     ../hm/modules/desktop-theme.nix
     ../hm/modules/desktop-utils.nix
     ../hm/modules/fonts.nix
-    ../hm/modules/input-devices.niX
+    ../hm/modules/input-devices.nix
     ../hm/modules/git.nix
     # programming dependencies
     ../hm/modules/dev-deps.nix
