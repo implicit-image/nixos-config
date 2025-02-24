@@ -3,7 +3,7 @@
   home = {
     sessionVariables = {
       SHELL = "zsh";
-      HM_FILES = "${config.homwDirectory}/repos/nixos-config/hm-files";
+      HM_FILES = "${config.home.homeDirectory}/repos/nixos-config/hm-files";
     };
   };
 }

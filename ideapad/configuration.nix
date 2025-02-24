@@ -10,13 +10,13 @@
       ./hardware-configuration.nix
 
       # basic network config
-      ./system-modules/network.nix
+      ../nixos/modules/network.nix
 
       #bluetooth config
-      ./system-modules/bluetooth.nix
+      ../nixos/modules/bluetooth.nix
 
       # sound
-      ./system-modules/sound.nix
+      ../nixos/modules/sound.nix
 
       # graphics
       # ./system-modules/graphics.nix

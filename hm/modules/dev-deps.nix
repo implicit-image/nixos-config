@@ -42,8 +42,16 @@
         rustfmt
         cargo
       ];
+      cloud-pkgs = with pkgs; [
+        azure-cli
+      ];
+      llm-pkgs = with pkgs; [
+        aider-chat
+      ];
     in
-      nixos-pkgs;
+      nixos-pkgs
+      ++ cloud-pkgs
+      ++ llm-pkgs;
 
   programs = {
     vscode = {
@@ -54,6 +62,56 @@
       enable = true;
       enableZshIntegration = true;
       nix-direnv.enable = true;
+    };
+    zed-editor = {
+      enable = true;
+      extensions = [
+        "activitywatch"
+        "ada"
+        "amber"
+        "asciidoc"
+        "assembly"
+        "astro"
+        "autocorrect"
+        "awk"
+        "basedpyright"
+        "bend"
+        "brainfuck"
+        "c3"
+        "caddyfile"
+        "cairo"
+        "cargo-appraiser"
+        "cargo-toml"
+        "clojure"
+        "cobol"
+        "code-stats"
+        "csv"
+        "d"
+        "dart"
+        "docker-compose"
+        "nix"
+        "idris2"
+        ""
+      ];
+      userKeymaps = [
+        {
+          context = "Workspace";
+          bindings = {
+            ctrl-shift-t = "workspace::NewTerminal";
+          };
+        }
+      ];
+      userSettings = {
+        features = {
+          copilot = true;
+        };
+        telemetry = {
+          metrics = false;
+        };
+        vim_mode = true;
+        ui_font_size = 16;
+        buffer_font_size = 16;
+      };
     };
   };
 

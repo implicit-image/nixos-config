@@ -1,10 +1,13 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, helix, steel, ... }:
 {
 
   home.sessionVariables.EDITOR = lib.mkDefault "hx";
 
   programs.helix = {
     enable = true;
+    extraPackages = [
+      steel.packages."${pkgs.system}".steel
+    ];
     languages = {
       language = [
         {
@@ -152,6 +155,7 @@
         };
       };
     };
+    package = helix.packages."${pkgs.system}".helix;
     themes = {
       custom-gruber-darker =
         let
