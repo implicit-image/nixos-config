@@ -8,13 +8,13 @@
     # tty tools
     ../hm/modules/tty.nix
     # desktop theme
-    ../hm/modules/desktop/theme.nix
-    ../hm/modules/desktop/utils.nix
+    ../hm/modules/desktop-theme.nix
+    ../hm/modules/desktop-utils.nix
     ../hm/modules/fonts.nix
-    ../hm/modules/input/devices.nix
+    ../hm/modules/input-devices.niX
     ../hm/modules/git.nix
     # programming dependencies
-    ../hm/modules/dev/deps.nix
+    ../hm/modules/dev-deps.nix
     # latex config
     ../hm/modules/latex.nix
     # emacs config
