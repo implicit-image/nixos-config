@@ -39,13 +39,6 @@
   # Enable the OpenSSH daemon.
   services = {
     openssh.enable = true;
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us, pl";
-        options = "grp:alt_shift_toggle";
-      };
-    };
   };
 
   programs = {
