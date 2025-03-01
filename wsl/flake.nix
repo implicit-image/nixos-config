@@ -2,11 +2,11 @@
   description = "NixOS WSL configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     # home-manager, used for managing user configuration
     home-manager = {
-      url = "github:nix-community/home-manager/release-unstable";
+      url = "github:nix-community/home-manager/release-24.11";
 
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with
@@ -24,6 +24,12 @@
           system = "x86_64-linux";
           modules = [
             ./configuration.nix
+ 	    nixos-wsl.nixosModules.default
+            {
+              wsl.enable = true;
+              wsl.defaultUser = "b";
+              wsl.startMenuLaunchers = true;
+            }
             # make home-manager as a module of nixos
             # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
             home-manager.nixosModules.home-manager

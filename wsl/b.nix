@@ -29,10 +29,11 @@
     # software
     ../hm/modules/zsh.nix
     ../hm/modules/kitty.nix
-    ../hm/modules/helix.nix
+    #../hm/modules/helix.nix
     ../hm/modules/mpv.nix
   ];
 
+  home.packages = with pkgs; [ wineWowPackages.stagingFull ];
   home.username = "b";
   home.homeDirectory = "/home/b";
 

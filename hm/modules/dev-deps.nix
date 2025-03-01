@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./helix.nix
+    #./helix.nix
   ];
 
   home.packages =
@@ -24,7 +24,7 @@
         lua-language-server
         yaml-language-server
         bash-language-server
-        astro-language-server
+        #astro-language-server
         kotlin-language-server
         svelte-language-server
         haskell-language-server
@@ -32,6 +32,7 @@
         # emace helpers
         emacs-lsp-booster
         nodejs
+        yarn
         # haskell
         ghc
         stack

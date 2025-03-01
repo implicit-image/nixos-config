@@ -4,6 +4,7 @@
     enable = true;
     userKnownHostsFile = "~/.ssh/known_hosts";
     addKeysToAgent = "confirm";
+    package = pkgs.openssh;
   };
 
   services.ssh-agent = {

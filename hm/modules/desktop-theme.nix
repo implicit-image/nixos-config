@@ -4,7 +4,7 @@
   qt = {
     enable = true;
     style = {
-      name = "kvantum";
+      name = "adwaita-dark";
     };
   };
   gtk = {
@@ -24,8 +24,8 @@
       package = pkgs.vimix-icon-theme;
     };
     theme = {
-      name = "vimix-beryl";
-      package = pkgs.vimix-gtk-themes;
+      name = "adwaita-dark";
+      package = pkgs.gnome-themes-extra;
     };
   };
 }
