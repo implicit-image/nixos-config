@@ -42,6 +42,8 @@
         rust-analyzer
         rustfmt
         cargo
+        # code
+        ast-grep
       ];
       cloud-pkgs = with pkgs; [
         azure-cli
