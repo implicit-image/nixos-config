@@ -1,15 +1,13 @@
 { config, pkgs, ... }:
 {
-  imports = [
-    #./helix.nix
-  ];
 
   home.packages =
     let
       nixos-pkgs = with pkgs; [
-        uv
         ripgrep
         # generic gnu stuff
+        tree-sitter
+        lsp-ai
         gcc
         cmake
         gnumake
@@ -17,9 +15,10 @@
         file
         devenv
         # language servers
+        nixd
+        nixdoc
         ccls
         typescript-language-server
-        vue-language-server
         jdt-language-server
         lua-language-server
         yaml-language-server
@@ -29,12 +28,14 @@
         svelte-language-server
         haskell-language-server
         vscode-langservers-extracted
+        basedpyright
         # emace helpers
         emacs-lsp-booster
         nodejs
         yarn
         # haskell
         ghc
+        # haskellPackages.ghcup
         stack
         # rust
         rustc
@@ -44,6 +45,22 @@
         cargo
         # code
         ast-grep
+        pnpm
+      ];
+      python-pkgs = with pkgs.python312Packages; [
+        uv
+        pip
+        jedi-language-server
+        numpy
+        epc
+        orjson
+        sexpdata
+        six
+        setuptools
+        paramiko
+        rapidfuzz
+        watchdog
+        packaging
       ];
       cloud-pkgs = with pkgs; [
         azure-cli
@@ -54,7 +71,8 @@
     in
       nixos-pkgs
       ++ cloud-pkgs
-      ++ llm-pkgs;
+      ++ llm-pkgs
+      ++ python-pkgs;
 
   programs = {
     vscode = {

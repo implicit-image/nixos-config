@@ -3,6 +3,7 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs30;
+    extraPackages = epkgs: [ epkgs.lsp-bridge ];
   };
 
   home.packages = with pkgs; [

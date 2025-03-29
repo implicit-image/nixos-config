@@ -14,6 +14,7 @@
     xfce.thunar-archive-plugin
     mysql-workbench
     ciscoPacketTracer8
+    xournalpp
   ];
 
   # screenshot directory

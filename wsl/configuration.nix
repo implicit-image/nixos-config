@@ -7,11 +7,7 @@
       #<nixos-wsl/module>
     ];
 
-  #wsl.enable = true;
-  #wsl.defaultUser = "b";
-  #wsl.startMenuLaunchers = true;
-
-  # Allow unfree packages
+   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
@@ -28,12 +24,6 @@
       gzip
       zip
     ];
-    # sessionVariables = {
-    #   DISPLAY=":0";
-    #   LIBGL_ALWAYS_INDIRECT=1;
-    #   GDK_SCALE=1;
-    #   GDK_DPI_SCALE=2;
-    # };
   };
 
   # Enable the OpenSSH daemon.
@@ -48,14 +38,16 @@
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
     };
+    zsh.enable = true;
     dconf.enable = true;
   };
 
-  fonts.packages = with pkgs; [
-    nerdfonts
-    fantasque-sans-mono
-  ];
+  fonts.packages = with pkgs; let
+    my-nerdfonts = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+    in
+    my-nerdfonts; 
 
+  users.users.b.shell = pkgs.zsh;
   # enable flake feature
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

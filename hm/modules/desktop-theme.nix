@@ -16,7 +16,7 @@
     };
     font = {
       name = "Iosevka Nerd Font Mono";
-      package = pkgs.nerdfonts;
+      package = pkgs.nerd-fonts.iosevka;
       size = 12;
     };
     iconTheme = {

@@ -15,6 +15,9 @@
       enable = true;
       strategy = [ "history" "completion" ];
     };
+    shellAliases = {
+      system-rebuild = "sudo nixos-rebuild switch";
+    };
     oh-my-zsh = {
       enable = true;
       plugins = [
@@ -22,7 +25,7 @@
         "sudo"
         "asdf"
       ];
-      theme = "aussiegeek";
+      theme = "dallas";
     };
     plugins = [];
   };
