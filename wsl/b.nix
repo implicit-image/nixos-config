@@ -26,7 +26,7 @@
 
     # virtualisation
     ../hm/modules/ssh.nix
-    ../hm/modules/gpg.nix
+    # ../hm/modules/gpg.nix
 
     # software
     ../hm/modules/zsh.nix

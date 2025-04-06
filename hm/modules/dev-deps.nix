@@ -46,6 +46,9 @@
         # code
         ast-grep
         pnpm
+        # d
+        dmd
+        vlang
       ];
       python-pkgs = with pkgs.python312Packages; [
         uv

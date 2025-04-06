@@ -4,7 +4,7 @@
   imports =
     [
       # wsl
-      #<nixos-wsl/module>
+      # <nixos-wsl/module>
     ];
 
    # Allow unfree packages

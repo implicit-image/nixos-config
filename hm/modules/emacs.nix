@@ -15,4 +15,5 @@
     hunspellDicts.en_US
     hunspellDicts.el_GR
   ];
+
 }
